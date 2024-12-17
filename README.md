@@ -84,6 +84,10 @@ The package uses requests_cache to cache API responses for a specified duration.
 
 <pre><code>weather_api = OpenWeather(api_key="your_api_key_here", cache_duration=3600)  # 1 hour cache duration</pre></code>
 
+## Example Package
+
+![Package Example](tests/pkg-test.jpeg)
+
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
