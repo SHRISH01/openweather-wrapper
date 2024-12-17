@@ -1,6 +1,6 @@
 from openweather.weather import OpenWeather
 
-api_key = "2c93339e7879008704993fef099aba90"
+api_key = "Your API Key"
 weather_api = OpenWeather(api_key)
 
-weather_api.plot_weather(city="London")
+weather_api.plot_weather(city="Delhi")

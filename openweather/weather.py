@@ -87,7 +87,3 @@ class OpenWeather:
         plt.tight_layout()
         plt.show()
 
-# Example usage:
-# api = OpenWeather(api_key="your_api_key")
-# weather = api.get_weather(city="London")
-# print(weather)
