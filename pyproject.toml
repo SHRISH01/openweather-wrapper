@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "openweather-wrapper"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Python wrapper for the OpenWeatherMap API to fetch weather data."
 readme = "README.md"
 authors = [{ name = "Shrish Kamboj", email = "shrishkamboj@gmail.com" }]
