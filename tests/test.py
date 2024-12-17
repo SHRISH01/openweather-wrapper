@@ -1,7 +1,6 @@
 from openweather.weather import OpenWeather
 
-api_key = "Your API Key"
+api_key = "2c93339e7879008704993fef099aba90"
 weather_api = OpenWeather(api_key)
 
-result = weather_api.convert_temperature(300, 'K', 'C')
-print(result)
+weather_api.create_weather_alert_notification('Delhi')

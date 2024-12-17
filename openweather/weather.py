@@ -457,22 +457,35 @@ class OpenWeather:
     def visualize_climate_trend(self, city, start_year, end_year):
         years = list(range(start_year, end_year + 1))
         temperatures = []
-        
+
         for year in years:
             try:
                 yearly_data = self.compare_climate_trends(city, year, year)
-                temperatures.append(yearly_data['base_year']['average_temperature'])
+                if yearly_data['base_year']['average_temperature'] is None:
+                    print(f"Warning: No temperature data available for {year}. Skipping this year.")
+                    temperatures.append(None)
+                else:
+                    # Convert the temperature to Celsius (instead of Kelvin)
+                    avg_temp_celsius = self.convert_temperature(yearly_data['base_year']['average_temperature'], 'K', 'C')
+                    temperatures.append(avg_temp_celsius)
             except Exception as e:
                 print(f"Could not retrieve data for {year}: {e}")
                 temperatures.append(None)
+
         valid_years = [year for year, temp in zip(years, temperatures) if temp is not None]
         valid_temps = [temp for temp in temperatures if temp is not None]
+
+        # If no valid data exists, display a message and exit the function
+        if not valid_years or not valid_temps:
+            print(f"No valid data available for the specified years ({start_year}-{end_year}) in {city}.")
+            return
+
+        # Proceed with plotting if valid data exists
         plt.figure(figsize=(12, 6))
         plt.plot(valid_years, valid_temps, marker='o')
         plt.title(f"Yearly Average Temperatures for {city}")
         plt.xlabel("Year")
-        plt.ylabel("Average Temperature (K)")
+        plt.ylabel("Average Temperature (°C)")
         plt.grid(True)
-        z = np.polyfit(valid_years, valid_temps, 1)
-        p = np.poly1d(z)
-        plt
+        plt.tight_layout()
+        plt.show()
