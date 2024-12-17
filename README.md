@@ -98,4 +98,4 @@ We welcome contributions! If you would like to contribute to this project, pleas
 
 ## Contact
 
-For any questions or support, feel free to open an issue on the GitHub repository or contact us directly at <span style="color:green">shrishkamboj@gmail.com</span>.
+For any questions or support, feel free to open an issue on the GitHub repository or contact us directly at <span style="color:green">shrishkamboz@gmail.com</span>.
