@@ -13,10 +13,6 @@
 
 ## Installation
 
-You can install the package using `pip` (once the package is registered on PyPi) or by cloning the repository:
-
-### Option 1: Install from PyPi (once available)
-
 <pre><code>pip install openweather-wrapper</pre></code>
 
 
