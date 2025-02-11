@@ -11,7 +11,7 @@
 - **Data Caching**: Cache weather data to reduce API calls using `requests_cache`.
 - **Data Visualization**: Plot temperature data for the next 24 hours using `matplotlib`.
 
-## Installation
+## Installation 
 
 <pre><code>pip install openweather-wrapper</pre></code>
 
