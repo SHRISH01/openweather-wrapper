@@ -2,7 +2,7 @@
 
 `OpenWeather Wrapper` is a Python package that provides an easy-to-use interface for interacting with various weather APIs like OpenWeatherMap and WeatherStack. It allows users to retrieve current weather data, hourly forecasts, and 7-day weather forecasts for a specified city or geographical coordinates (latitude and longitude). The package also supports data caching, error handling, and data visualization.
 
-## Features
+## Features 
 
 - **Weather Data Fetching**: Fetch current weather data by city name or geographical coordinates (latitude/longitude).
 - **Hourly Forecast**: Retrieve hourly weather forecast data for the next 24 hours.
